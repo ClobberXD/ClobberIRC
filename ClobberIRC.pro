@@ -25,16 +25,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-        main.cpp \
-        appwindow.cpp
+		src/main.cpp \
+		src/appwindow.cpp
 
 HEADERS += \
-        appwindow.h
+		src/appwindow.h
 
 FORMS += \
-        appwindow.ui
+		src/appwindow.ui
+
+##################################################
+# Communi stuff
+
+DEFINES += IRC_NAMESPACE=communi
+include(src/libcommuni/src/src.pri)
+
+##################################################
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+	.gitignore
