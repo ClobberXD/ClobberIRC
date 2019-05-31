@@ -38,7 +38,7 @@ FORMS += \
 # Communi stuff
 
 DEFINES += IRC_NAMESPACE=communi
-include(src/libcommuni/src/src.pri)
+include(libcommuni/src/src.pri)
 
 ##################################################
 
