@@ -25,7 +25,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-		src/main.cpp \
+		src/application.cpp \
 		src/appwindow.cpp
 
 HEADERS += \
